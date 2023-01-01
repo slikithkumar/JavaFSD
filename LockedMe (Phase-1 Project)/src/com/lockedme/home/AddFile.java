@@ -11,19 +11,19 @@ public class AddFile {
 	public void addFile(String filename, String content) {
         try {
             //Whatever the file path is.
-            File newText = new File("F:\\Simplilearn\\Java Full Stack Development\\Phase-1 Project\\Documents", filename);
+            File newText = new File("F:\\Simplilearn\\Java Full Stack Development\\JavaFSD\\LockedMe (Phase-1 Project)\\Documents", filename);
             if (newText.createNewFile()) {
             	FileOutputStream is = new FileOutputStream(newText);
                 OutputStreamWriter osw = new OutputStreamWriter(is);    
                 Writer w = new BufferedWriter(osw);
                 w.write(content);
                 w.close();
-                System.out.println("File created: " + newText.getName());
+                System.out.println("File Created: " + newText.getName());
               } else {
-                System.out.println("File already exists. Please Choose a Different File Name.");
+                System.out.println("File Already Exists. Please Choose a Different File Name.");
               }
         } catch (IOException e) {
-            System.err.println("Something went wrong !!!");
+            System.err.println("Something Went Wrong !!!");
         }
     }
 }

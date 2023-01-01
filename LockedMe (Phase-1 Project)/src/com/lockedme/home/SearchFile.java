@@ -15,7 +15,7 @@ public class SearchFile {
         String[] flist = directory.list();
  
         if (flist == null) {
-            return "Empty directory.";
+            return "Empty Directory.";
         }
         else {
   
@@ -23,7 +23,7 @@ public class SearchFile {
             for (int i = 0; i < flist.length; i++) {
                 String filename = flist[i];
                 if (filename.equals(f)) {
-                    return filename + " found";
+                    return filename + " Found";
                 }
             }
         }
