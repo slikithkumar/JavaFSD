@@ -49,14 +49,17 @@ public class LockedMeApp {
 						if(fObj.exists() && fObj.isDirectory())  
 						{  
 							// array for the files of the directory pointed by fObj  
-							File files[] = fObj.listFiles();  
-							// display statements  
-							System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");  
-							System.out.println("Displaying Files from the directory : " + fObj);  
-							System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
-							Arrays.sort(files);
-							// Calling the method  
-							fao.printFileNames(files, 0);  
+							File files[] = fObj.listFiles();
+							if(files.length == 0) System.out.println("Directory is Empty. Add Files To View Them.");
+							else {
+								// display statements  
+								System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");  
+								System.out.println("Displaying Files from the directory : " + fObj);  
+								System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
+								Arrays.sort(files);
+								// Calling the method  
+								fao.printFileNames(files, 0);
+							}
 						}
 						break;
 				case 2: // File Operations
