@@ -18,7 +18,5 @@ public class DeleteFile {
 		}
 		
 		return "File Not Found. Please Check The File Name Entered and Try Again.";
-		
-		//for(int i=0; i < flist.length; i++) System.out.println(flist[i]);
 	}
 }

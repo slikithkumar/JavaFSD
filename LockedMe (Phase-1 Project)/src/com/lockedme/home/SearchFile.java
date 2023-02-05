@@ -28,7 +28,7 @@ public class SearchFile {
             }
         }
         
-        return "File Not Found. Please check the file name entered and try again.";
+        return "File Not Found. File Names are case-sensitive. Please check the file name entered and try again.";
     }
 }
 
